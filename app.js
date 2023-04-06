@@ -57,9 +57,12 @@ app.post("/compose", function(req, res){
   });
 
   // posts.push(post);
-  post.save();
+  post.save().then(() => {
+    console.log("Post added to DB");
+    res.redirect("/");
+  });
 
-  res.redirect("/");
+  // res.redirect("/");
 
 });
 
