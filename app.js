@@ -56,13 +56,10 @@ app.post("/compose", function(req, res){
     content: req.body.postBody
   });
 
-  // posts.push(post);
   post.save().then(() => {
     console.log("Post added to DB");
     res.redirect("/");
   });
-
-  // res.redirect("/");
 
 });
 
@@ -77,17 +74,6 @@ app.get("/posts/:postId", function(req, res){
         content: post.content
       });
     });
-
-  // posts.forEach(function(post){
-  //   const storedTitle = _.lowerCase(post.title);
-
-  //   if (storedTitle === requestedTitle) {
-  //     res.render("post", {
-  //       title: post.title,
-  //       content: post.content
-  //     });
-  //   }
-  // });
 
 });
 
