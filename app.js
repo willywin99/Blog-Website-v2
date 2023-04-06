@@ -6,7 +6,8 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true});
+// mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://admin-willy:cingku99@cluster0.8e2a6hy.mongodb.net/blogDB", {useNewUrlParser: true});
 
 const postSchema = {
   title: String,
